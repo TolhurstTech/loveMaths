@@ -9,14 +9,44 @@
     <title>Document</title>
 </head>
 <body>
+
+    <!-- Heading -->
     <h1 class="heading">
         <img src="assets/images/logo.png" alt="logo" class="logo"> Love Maths
     </h1>    
-        
+    
+    <!-- Game container -->
     <div class="game-area">
+        <!-- Controls Container-->
+        <div class="controls-area">
+            <!-- Control Buttons -->
+            <button class="btn btn--big btn--green">
+                <i class="fas fa-plus"></i>
+            </button>
+            <button class="btn btn--big btn--blue">
+                <i class="fas fa-minus"></i>
+            </button>
+            <button class="btn btn--big btn--orange">
+                <i class="fas fa-times"></i>
+            </button>
+            <button class="btn btn--big btn--red">
+                <i class="fas fa-divide"></i>
+            </button>
+        </div>
 
+        <!-- Questions Container -->
+        <div class="question-area">
+            <span id="operand1">0</span>
+            <span id="operator">x</span>
+            <span id="operand2">0</span>
+            <span>=</span>
+            <p class="answer-message">Enter Answer:</p>
+            <input type="number" id="answer-box">
+        </div>
+        <button class="btn btn--gray">Submit Answer</button>
     </div>
 
+    <!-- Score Display Area -->
     <div class="score-area">
         <p class="scores">Correct Answers <span id="score">0</span></p>
         <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
