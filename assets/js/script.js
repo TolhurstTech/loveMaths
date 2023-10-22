@@ -19,7 +19,15 @@ document.addEventListener("DOMContentLoaded", function(){
 
     }
 
-    runGame("addition");
+    // Add event listener to check for a key press in the answer-box and execute the checkAnswer() function if the key was the enter key
+    document.getElementById('answer-box').addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            checkAnswer();
+        }
+    })
+
+    // Run the game after the DOM has loaded and listeners are all set up for playing. Default is addition game.
+    runGame('addition');
 })
 
 /**
@@ -28,7 +36,10 @@ document.addEventListener("DOMContentLoaded", function(){
  */
 function runGame(gameType) {
 
-    
+    // Clear previous entry from the input box
+    document.getElementById('answer-box').value ='';
+    // Put the focus of the cursor on the input box at the start of every game
+    document.getElementById('answer-box').focus();
     // Create two random numbers between 1 and 25 for our operands
     let num1 = Math.floor(Math.random() * 25) +1;
     let num2 = Math.floor(Math.random() * 25) +1;
